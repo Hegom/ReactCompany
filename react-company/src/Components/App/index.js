@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import {NavigationDrawer} from 'react-md'
+import { NavigationDrawer } from 'react-md';
 import Header from '../Header'
-import Products from '../Products'
+import Navigation from '../Navigation'
 import './style.css';
 
-class App extends Component {
+class App extends Component { 
   render() {
-    return (
+    return (     
       <NavigationDrawer
-        drawerTitle="react-md with CRA"
+        drawerTitle="Categories"
         toolbarTitle="Welcome to react-md"
       >
         <div className="App">          
-          <Header/>         
-          <Products/>
+          <Header />    
+          <Navigation />     
         </div>
       </NavigationDrawer>
     );
