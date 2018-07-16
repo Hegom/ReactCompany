@@ -2,5 +2,32 @@
 //@import '../node_modules/react-md/src/scss/react-md';
 
 // Any variable overrides. The following just changes the default theme to use teal and purple.
-$md-primary-color: $md-teal-500;
+$md-primary-color: $md-grey-500;
 $md-secondary-color: $md-purple-a-400;
+
+.md-toolbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #9e9e9e;
+    //align-content: center;
+}
+
+.md-toolbar li {
+    float: left;
+}
+
+.md-toolbar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    //padding: 14px 16px;
+    padding: 19px 20px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.md-toolbar li a:hover {
+    background-color: #696969;
+}    

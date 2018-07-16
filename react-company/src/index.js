@@ -4,6 +4,7 @@ import './index.css';
 import App from './Components/App'
 import registerServiceWorker from './registerServiceWorker';
 import WebFontLoader from 'webfontloader';
+import { BrowserRouter as Router} from "react-router-dom";
 
 WebFontLoader.load({
     google:{
@@ -11,5 +12,5 @@ WebFontLoader.load({
     },
 });
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Router><App /></Router>, document.getElementById('root'));
 registerServiceWorker();

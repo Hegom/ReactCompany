@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
+import Products from '../Products'
+import Clients from '../Clients'
+import Contact from '../Contact'
 //import './style.scss';
 
 class Links extends Component {
     render() {
-        return (
+        return (           
             <ul>
                 <li>
                     <Link to="/">Home</Link>
@@ -16,16 +19,7 @@ class Links extends Component {
                     <Link to="/clients">Clients</Link>
                 </li>
                 <li>
-                    <Link to="/products">All</Link>
-                </li>
-                <li>
-                    <Link to="/products/tech">Tech</Link>
-                </li>
-                <li>
-                    <Link to="/products/services">Services</Link>
-                </li>
-                <li>
-                    <Link to="/products/office">Office</Link>
+                    <Link to="/contact">Contact</Link>
                 </li>
             </ul>
         );
