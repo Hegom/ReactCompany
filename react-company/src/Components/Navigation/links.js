@@ -10,16 +10,16 @@ class Links extends Component {
         return (           
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">HOME</Link>
                 </li>
                 <li>
-                    <Link to="/products">Products</Link>
+                    <Link to="/products">PRODUCTS</Link>
                 </li>
                 <li>
-                    <Link to="/clients">Clients</Link>
+                    <Link to="/clients">CLIENTS</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact">CONTACT</Link>
                 </li>
             </ul>
         );

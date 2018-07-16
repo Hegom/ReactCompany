@@ -4,7 +4,7 @@ import './style.css';
 class Home extends Component {
   render() {
     return (
-      <div>Hi from Home...</div>
+      <h1>Home</h1>
     );
   }
 }

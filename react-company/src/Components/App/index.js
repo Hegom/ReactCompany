@@ -3,7 +3,6 @@ import { NavigationDrawer } from 'react-md';
 import Navigation from '../Navigation'
 import NavItemLink from '../Navigation/navItemLink';
 import Links from '../Navigation/links'
-//import navItems from '../Static/navItems'
 import './style.css';
 
 const navItems = [{
