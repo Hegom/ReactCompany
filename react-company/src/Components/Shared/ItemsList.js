@@ -1,15 +1,24 @@
 import React from 'react';
-import { GridList, Card, Media } from 'react-md';
-import data from '../../Static/r8yTaSYN.json';
-import ItemContainer from '../Shared/ItemContainer'
+import { GridList } from 'react-md';
+import Item from '../Shared/Item'
 
+class ItemsList extends React.Component {
 
-const ItemsList = () => (
-    <GridList container="Media" size={1} component="section">
-        {data.map(({ id, photo }) => (
-           <ItemContainer src = {photo} />
-        ))}
-    </GridList>
-);
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <GridList container="Media" size={1} component="section">
+                {
+                    this.props.data.map(function (product) {
+                        return <Item data={product}/>;
+                    })
+                }
+            </GridList>
+        );
+    }
+}
 
 export default ItemsList;
