@@ -16,8 +16,8 @@ class Item extends React.Component {
                     <h4>{brand}</h4>
                 </section>
                 <section className="md-cell md-cell--3-tablet md-cell--4-desktop">
-                    <Media aspectRatio="1-1">
-                        <img src={photo} alt="Something from unsplash.it" />
+                    <Media aspectRatio="1-1"  className="fixedImg">
+                        <img src={photo} alt={name} />
                     </Media>
                 </section>
                 <section className="md-cell md-cell--5-tablet md-cell--8-desktop md-text-left">

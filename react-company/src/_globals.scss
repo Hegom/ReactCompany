@@ -12,7 +12,7 @@ $md-secondary-color: $md-purple-a-400;
     background-color: #9e9e9e;
 }
 
-.md-toolbar li {
+.md-toolbar li {   
     float: left;
 }
 
@@ -20,8 +20,8 @@ $md-secondary-color: $md-purple-a-400;
     display: block;
     color: black;
     text-align: center;
-    padding: 19px 20px;
-    text-decoration: none;
+    padding: 23px 20px;
+    text-decoration: none;    
 }
 
 .md-toolbar li a:hover {
@@ -30,4 +30,19 @@ $md-secondary-color: $md-purple-a-400;
 
 .card {
     background-color: #ffffff;
-  }
+}
+
+.content{
+    padding-left: 20px;
+    padding-top: 8px;
+    margin: 0;
+}
+// .fixedImg {    
+//     width: 80px;
+//     height: auto;
+//   }
+  
+// .fixedImg img {
+//     max-height: 100%;
+//     max-width: 100%;
+// }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { Route, Switch} from "react-router-dom";
 import Products from '../Products'
 import Clients from '../Clients'
 import Contact from '../Contact'
-/* global location */
-/* eslint no-restricted-globals: ["off", "location"] */
+import Home from '../Home'
 
 class Navigation extends Component {
   render() {
@@ -12,7 +11,7 @@ class Navigation extends Component {
         <div>
           <hr />
           <Switch>
-          <Route exact path="/" />
+          <Route exact path="/" component={Home}/>
           <Route exact path="/products" component={Products} />
           <Route path="/products/:category" component={Products} />
           <Route path="/clients" component={Clients} />
