@@ -1,5 +1,5 @@
 import React from 'react';
-import { Media  } from 'react-md';
+import { Media } from 'react-md';
 
 const Image = ({ src, alt }) => (
 

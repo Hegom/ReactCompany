@@ -46,3 +46,13 @@ $md-secondary-color: $md-purple-a-400;
 //     max-height: 100%;
 //     max-width: 100%;
 // }
+
+.App-logo {
+    animation: App-logo-spin infinite 5s linear;
+    height: 80px;
+}
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
