@@ -31,7 +31,8 @@ class LazyImage extends React.Component {
         <img
           style={this.props.style}
           //src={this.props.unloadedSrc}
-          alt={this.props.alt} />
+          // alt={this.props.alt} 
+          alt="Can't load this image..."/>
       </Media>
     } else if (!this.state.loaded) {
       return <Media aspectRatio="1-1" className="fixedImg">
