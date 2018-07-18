@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import data from '../../Static/r8yTaSYN.json';
-import ItemsList from '../Shared/ItemsList'
+import ItemList from '../Shared/ItemList'
 
 class Products extends Component {
-  render() {
+  render() {    
     const { category } = this.props.match.params;
     return (
-      <ItemsList data={data} category={category} />
+      <ItemList filters={category} />
     );
-  }
+  }  
 }
 
 export default Products;

@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link } from "react-router-dom";
-import Products from '../Products'
-import Clients from '../Clients'
-import Contact from '../Contact'
-//import './style.scss';
+import { Link } from "react-router-dom";
 
 class Links extends Component {
     render() {
         return (           
-            <ul>
+            <ul className="md-font-bold">
                 <li>
                     <Link to="/">HOME</Link>
                 </li>

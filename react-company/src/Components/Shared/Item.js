@@ -1,5 +1,6 @@
 import React from 'react';
-import { Paper, Media  } from 'react-md';
+import { Paper } from 'react-md';
+import Image from './Image'
 
 class Item extends React.Component {
 
@@ -16,9 +17,7 @@ class Item extends React.Component {
                     <h4>{brand}</h4>
                 </section>
                 <section className="md-cell md-cell--3-tablet md-cell--4-desktop">
-                    <Media aspectRatio="1-1"  className="fixedImg">
-                        <img src={photo} alt={name} />
-                    </Media>
+                    <Image src={photo} alt={name} />
                 </section>
                 <section className="md-cell md-cell--5-tablet md-cell--8-desktop md-text-left">
                     <p>{description}</p>

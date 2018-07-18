@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { NavigationDrawer } from 'react-md';
 import Navigation from '../Navigation'
-import NavItemLink from '../Navigation/navItemLink';
-import Links from '../Navigation/links'
+import NavItemLink from '../Navigation/NavItemLink';
+import Links from '../Navigation/Links'
 
 const navItems = [{
   label: 'All',
