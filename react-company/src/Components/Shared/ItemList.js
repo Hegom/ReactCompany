@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { GridList } from 'react-md';
 import Item from './Item'
 import ItemCount from './ItemCount'
@@ -12,7 +12,7 @@ class ItemList extends Component {
     render() {
         const { data, originalDataLength} = this.props;
         return (
-            <div>
+            <Fragment>
                 <ItemCount total={originalDataLength} filtered={data.length} />
                 <GridList container="Media" size={1} component="section">
                     {
@@ -21,7 +21,7 @@ class ItemList extends Component {
                         })
                     }
                 </GridList>
-            </div>
+            </Fragment>
         );
     }
 }

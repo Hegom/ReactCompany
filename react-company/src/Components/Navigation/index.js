@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Route, Switch } from "react-router-dom";
 import Products from '../Products'
 import Clients from '../Clients'
@@ -8,7 +8,7 @@ import Home from '../Home'
 class Navigation extends Component {
   render() {
     return (
-        <div>
+        <Fragment>
           <hr />
           <Switch>
           <Route exact path="/" component={Home}/>
@@ -17,7 +17,7 @@ class Navigation extends Component {
           <Route path="/clients" component={Clients} />
           <Route path="/contact" component={Contact} />
           </Switch>
-        </div>
+        </Fragment>
     );
   }
 }

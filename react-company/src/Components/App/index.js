@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { NavigationDrawer } from 'react-md';
 import Navigation from '../Navigation'
 import NavItemLink from '../Navigation/NavItemLink';
@@ -29,7 +29,7 @@ const navItems = [{
 class App extends Component {
   render() {
     return (
-      <div>
+      <Fragment >
         <NavigationDrawer
           drawerTitle="Categories"
           toolbarTitle=" "
@@ -41,7 +41,7 @@ class App extends Component {
             <Navigation />
           </div>
         </NavigationDrawer>
-      </div>
+      </Fragment >
     );
   }
 }

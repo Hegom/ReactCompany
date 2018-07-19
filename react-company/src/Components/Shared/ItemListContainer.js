@@ -9,7 +9,10 @@ class ItemListContainer extends Component {
     componentDidMount() {
         fetch('/data.json')
             .then(res => res.json())
-            .then(this.onLoad);
+            .then(this.onLoad)
+            .catch((error) => {
+                console.error(error);
+              });
     }
 
     parseData(data) {
@@ -24,14 +27,13 @@ class ItemListContainer extends Component {
 
     render() {
         const { data } = this.state;
-
         return data ?
             this.renderData(data) :
             this.renderLoading();
     }
 
     filterData(data, filter){
-        let filterdData;
+        var filterdData;
         if (filter != null) {
             filterdData = data.filter(
                 (product) => {
@@ -42,7 +44,6 @@ class ItemListContainer extends Component {
         else { 
             filterdData = data; 
         }   
-
         return filterdData;
     }
 
