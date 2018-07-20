@@ -1,8 +1,6 @@
 import React from 'react';
 import { Paper } from 'react-md';
 import Image from './Image'
-import LazyImage from './LazyImage'
-import LoadingImage from './loading.svg';
 
 class Item extends React.Component {
 
@@ -20,8 +18,7 @@ class Item extends React.Component {
                     <p className="grey-text md-font-medium">{categoriesSplitted} - {brand}</p>
                 </section>
                 <section className="md-cell md-cell--3-tablet md-cell--4-desktop">
-                    {/* <Image src={photo} alt={name} /> */}
-                    <LazyImage unloadedSrc={LoadingImage} src={photo} alt={name} />                   
+                    <Image src={photo} alt={name} />
                 </section>
                 <section className="md-cell md-cell--5-tablet md-cell--8-desktop md-text-left">
                     <p>{description}</p>
