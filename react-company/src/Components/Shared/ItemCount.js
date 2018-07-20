@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const ItemCount = ({ total, filtered, name }) => (
 
     <p className="content">
-        Showing&nbsp;
-                    <span className="md-font-bold">
+        <span> Showing </span>
+        <span className="md-font-bold">
             {filtered}&nbsp;
-                    </span>
-        {name} - Hidden:&nbsp;
-                    <span className="md-font-bold">
-            {total - filtered}
         </span>
+        {name}
+        {total != filtered &&
+            <Fragment>
+                <span> - Hidden: </span>
+                <span className="md-font-bold">
+                    {total - filtered}
+                </span>
+            </Fragment>
+        }
     </p>
 );
 

@@ -12,7 +12,7 @@ class ItemListContainer extends Component {
             .then(this.onLoad)
             .catch((error) => {
                 console.error(error);
-              });
+            });
     }
 
     parseData(data) {
@@ -32,7 +32,7 @@ class ItemListContainer extends Component {
             this.renderLoading();
     }
 
-    filterData(data, filter){
+    filterData(data, filter) {
         var filterdData;
         if (filter != null) {
             filterdData = data.filter(
@@ -40,14 +40,14 @@ class ItemListContainer extends Component {
                     return product.categories.toString().toLowerCase().indexOf(filter) !== -1;
                 }
             );
-        } 
-        else { 
-            filterdData = data; 
-        }   
+        }
+        else {
+            filterdData = data;
+        }
         return filterdData;
     }
 
-    renderData(data) {       
+    renderData(data) {
         if (data && data.length > 0) {
             const { filters } = this.props;
             let dataLength = data.length;
@@ -62,7 +62,7 @@ class ItemListContainer extends Component {
 
     renderLoading() {
         return <div className="content">Loading...</div>;
-    }    
+    }
 }
 
 export default ItemListContainer;

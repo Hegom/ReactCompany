@@ -2,8 +2,7 @@ import React from 'react';
 import { Media } from 'react-md';
 
 const Image = ({ src, alt }) => (
-
-    <Media aspectRatio="1-1" className="fixedImg">
+    <Media className="media">
         <img src={src} alt={alt} />
     </Media>
 );

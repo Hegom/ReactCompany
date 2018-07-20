@@ -10,10 +10,10 @@ class ProductList extends Component {
     }
 
     render() {
-        const { data, originalDataLength} = this.props;
+        const { data, originalDataLength, objectName } = this.props;
         return (
             <Fragment>
-                <ItemCount total={originalDataLength} filtered={data.length} />
+                <ItemCount total={originalDataLength} filtered={data.length} name={objectName} />
                 <GridList container="Media" size={1} component="section">
                     {
                         data.map(function (item) {
@@ -25,5 +25,9 @@ class ProductList extends Component {
         );
     }
 }
+
+ProductList.defaultProps = {
+    objectName: 'products'
+};
 
 export default ProductList;

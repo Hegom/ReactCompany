@@ -1,15 +1,20 @@
 import React from 'react';
 import { Paper } from 'react-md';
+import PropTypes from 'prop-types';
 import Image from '../Shared/Image'
 
 class Product extends React.Component {
+
+    static defaultProps = {
+        objectName: 'stranger'
+    }
 
     constructor(props) {
         super(props);
     }
 
     render() {
-        const {name, brand, photo, description, stock, price, categories } = this.props.data;
+        const { name, brand, photo, description, stock, price, categories } = this.props.data;
         const categoriesSplitted = categories.toString().split(/(?=[A-Z])/).join(" ");
         return (
             <Paper className="md-cell md-cell--12 md-grid card">
@@ -18,7 +23,7 @@ class Product extends React.Component {
                     <p className="grey-text md-font-medium">{categoriesSplitted} - {brand}</p>
                 </section>
                 <section className="md-cell md-cell--3-tablet md-cell--4-desktop">
-                    <Image src={photo} alt={name} name="products" />
+                    <Image src={photo} alt={name} />
                 </section>
                 <section className="md-cell md-cell--5-tablet md-cell--8-desktop md-text-left">
                     <p>{description}</p>
@@ -29,5 +34,15 @@ class Product extends React.Component {
         );
     }
 }
+
+Product.propTypes = {
+    name: PropTypes.string,
+    brand: PropTypes.string,
+    categories: PropTypes.string,
+    photo: PropTypes.string,
+    description: PropTypes.string,
+    stock: PropTypes.number,
+    price: PropTypes.number,
+};
 
 export default Product;
