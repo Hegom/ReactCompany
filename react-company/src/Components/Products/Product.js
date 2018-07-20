@@ -3,11 +3,7 @@ import { Paper } from 'react-md';
 import PropTypes from 'prop-types';
 import Image from '../Shared/Image'
 
-class Product extends React.Component {
-
-    static defaultProps = {
-        objectName: 'stranger'
-    }
+class Product extends React.Component {  
 
     constructor(props) {
         super(props);
@@ -20,7 +16,7 @@ class Product extends React.Component {
             <Paper className="md-cell md-cell--12 md-grid card">
                 <section className="md-cell md-cell--12 md-text-left">
                     <h2>{name}</h2>
-                    <p className="grey-text md-font-medium">{categoriesSplitted} - {brand}</p>
+                    <p className="greyText md-font-medium">{categoriesSplitted} - {brand}</p>
                 </section>
                 <section className="md-cell md-cell--3-tablet md-cell--4-desktop">
                     <Image src={photo} alt={name} />

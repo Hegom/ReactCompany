@@ -1,61 +1,53 @@
 @import 'react-md/src/scss/react-md';
 
-// Any variable overrides. The following just changes the default theme to use teal and purple.
 $md-primary-color: $md-grey-500;
 $md-secondary-color: $md-purple-a-400;
 
-.md-toolbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #9e9e9e;
+.greyText {    
+    color: $md-grey-500;      
+} 
+
+.md-toolbar {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li{
+        float: left;        
+    }
 }
 
-.md-toolbar li {   
-    float: left;
+.md-toolbar li {    
+    a{
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 23px 20px;
+        text-decoration: none;   
+        &:hover{
+            background-color: dimgray;
+        }
+    } 
 }
-
-.md-toolbar li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 23px 20px;
-    text-decoration: none;    
+  
+.media { 
+    img {
+        display: block;
+        max-height:150px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-
-.md-toolbar li a:hover {
-    background-color: #696969;
-}    
 
 .card {
-    background-color: #ffffff;
+    background-color: white;
 }
 
 .content{
     padding-left: 20px;
     padding-top: 8px;
     margin: 0;
-}
-  
-.media img {
-   display: block;
-   max-height:150px;
-   width: auto;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-.grey-text {    
-    color: $md-grey-500;      
-}
-
-.App-logo {
-    animation: App-logo-spin infinite 5s linear;
-    height: 80px;
-}
-
-@keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
 }

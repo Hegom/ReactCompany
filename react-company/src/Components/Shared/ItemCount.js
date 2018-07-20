@@ -8,7 +8,7 @@ const ItemCount = ({ total, filtered, name }) => (
             {filtered}&nbsp;
         </span>
         {name}
-        {total != filtered &&
+        {total !== filtered &&
             <Fragment>
                 <span> - Hidden: </span>
                 <span className="md-font-bold">
