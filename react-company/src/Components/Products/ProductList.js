@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { GridList } from 'react-md';
-import Item from './Item'
-import ItemCount from './ItemCount'
+import Product from './Product'
+import ItemCount from '../Shared/ItemCount'
 
-class ItemList extends Component {
+class ProductList extends Component {
 
     constructor(props) {
         super(props);
@@ -16,8 +16,8 @@ class ItemList extends Component {
                 <ItemCount total={originalDataLength} filtered={data.length} />
                 <GridList container="Media" size={1} component="section">
                     {
-                        data.map(function (product) {
-                            return <Item key={product.id} data={product} />;
+                        data.map(function (item) {
+                            return <Product key={item.id} data={item} />;
                         })
                     }
                 </GridList>
@@ -26,4 +26,4 @@ class ItemList extends Component {
     }
 }
 
-export default ItemList;
+export default ProductList;

@@ -2,12 +2,11 @@ import React, { Component, Fragment } from 'react';
 import { NavigationDrawer } from 'react-md';
 import Navigation from '../Navigation'
 import NavItemLink from '../Navigation/NavItemLink';
-import Links from '../Navigation/Links'
+import ToolbarLinks from '../Navigation/ToolbarLinks'
 
 const navItems = [{
   label: 'All',
   to: '/products',
-  exact: true,
   icon: 'list',
 }, {
   divider: true,
@@ -33,8 +32,7 @@ class App extends Component {
         <NavigationDrawer
           drawerTitle="Categories"
           toolbarTitle=" "
-          toolbarChildren={<Links />}
-          too
+          toolbarChildren={<ToolbarLinks />}
           navItems={navItems.map(props => <NavItemLink {...props} key={props.to} />)}
         >
           <div className="App">

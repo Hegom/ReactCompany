@@ -1,8 +1,8 @@
 import React from 'react';
 import { Paper } from 'react-md';
-import Image from './Image'
+import Image from '../Shared/Image'
 
-class Item extends React.Component {
+class Product extends React.Component {
 
     constructor(props) {
         super(props);
@@ -18,7 +18,7 @@ class Item extends React.Component {
                     <p className="grey-text md-font-medium">{categoriesSplitted} - {brand}</p>
                 </section>
                 <section className="md-cell md-cell--3-tablet md-cell--4-desktop">
-                    <Image src={photo} alt={name} />
+                    <Image src={photo} alt={name} name="products" />
                 </section>
                 <section className="md-cell md-cell--5-tablet md-cell--8-desktop md-text-left">
                     <p>{description}</p>
@@ -30,4 +30,4 @@ class Item extends React.Component {
     }
 }
 
-export default Item;
+export default Product;

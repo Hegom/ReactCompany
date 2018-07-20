@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ItemList from './ItemList';
+import ProductList from './ProductList';
 
 class ItemListContainer extends Component {
     state = {
@@ -53,7 +53,7 @@ class ItemListContainer extends Component {
             let dataLength = data.length;
             let filteredData = this.filterData(data, filters);
             return (
-                <ItemList data={filteredData} originalDataLength={dataLength} />
+                <ProductList data={filteredData} originalDataLength={dataLength} />
             );
         } else {
             return <div className="content">No items found</div>;
